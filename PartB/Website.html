@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height to full viewport height */
+}
+
+/* Style the header */
+.header {
+  background-color: #53836c;
+  padding: 10px;
+  text-align: center;
+  color: #fef9f9;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 31%;
+  padding: 15px;
+  margin-right: 2%;
+  box-sizing: border-box;
+}
+.about {
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+/* Different background colors for each column */
+.column:nth-child(1) {
+  background-color: #e0faca; /* Light Red */
+}
+
+.column:nth-child(2) {
+  background-color: #e0faca; /* Light Green */
+}
+
+.column:nth-child(3) {
+  background-color: #e0faca; /* Light Blue */
+}
+
+/* Sticky footer */
+.footer {
+  background-color: #203921;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>About </h1>
+</div>
+
+
+<div class ="about">
+<p>AB's Mountain View Homestay, nestled in the heart of Madikeri, offers a perfect blend of comfort and charm. Carefully curated spaces provide a unique and personalized experience, combining modern amenities with the warmth of local hospitality. Immerse yourself in tranquility, making each stay at AB's Mountain View a memorable journey filled with shared moments and genuine connection.</p></div>
+<div class="row">
+  <div class="column">
+    <p>Welcome to <b>AB's Mountain View</b>, where comfort and charm converge...</p>
+  </div>
+
+  <div class="column">
+    <p>Immerse yourself in the tranquility of <b>AB's Mountain View</b>, a haven where...</p>
+  </div>
+
+  <div class="column">
+    <p>At <b>AB's Mountain View</b>, our mission is to redefine your travel experience...</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2024 AB's Mountain View. All rights reserved.</p>
+</div>
+
+</body>
+</html>
